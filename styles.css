@@ -27,6 +27,12 @@ body {
   background-color: #fff0f5;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
