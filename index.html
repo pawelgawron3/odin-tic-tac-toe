@@ -11,6 +11,88 @@
       href="./assets/top_favicon.svg"
       type="image/x-icon"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>The tic-tac-toe project</h1>
+      <button type="button" id="addPlayersButton">Add players</button>
+    </header>
+    <main></main>
+    <footer>
+      <p>Copyright &#169; The Odin Project 2025</p>
+    </footer>
+
+    <dialog id="createPlayersDialog">
+      <h2>Create players:</h2>
+      <form method="dialog" id="createPlayersForm">
+        <label for="playerOneName">P1 name:</label>
+        <input
+          type="text"
+          name="playerOneName"
+          id="playerOneName"
+          minlength="1"
+          maxlength="30"
+          required
+        />
+        <fieldset>
+          <legend>P1 sign:</legend>
+          <div class="radioOptions">
+            <input
+              type="radio"
+              name="playerOneSign"
+              id="playerOneSignO"
+              value="O"
+            />
+            <label for="playerOneSignO">O</label>
+
+            <input
+              type="radio"
+              name="playerOneSign"
+              id="playerOneSignX"
+              value="X"
+            />
+            <label for="playerOneSignX">X</label>
+          </div>
+        </fieldset>
+
+        <label for="playerTwoName">P2 name:</label>
+        <input
+          type="text"
+          name="playerTwoName"
+          id="playerTwoName"
+          minlength="1"
+          maxlength="30"
+        />
+        <fieldset>
+          <legend>P2 sign:</legend>
+          <div class="radioOptions">
+            <input
+              type="radio"
+              name="playerTwoSign"
+              id="playerTwoSignO"
+              value="O"
+              required
+            />
+            <label for="playerTwoSignO">O</label>
+
+            <input
+              type="radio"
+              name="playerTwoSign"
+              id="playerTwoSignX"
+              value="X"
+            />
+            <label for="playerTwoSignX">X</label>
+          </div>
+        </fieldset>
+        <div class="dialogButtons">
+          <button type="submit">Confirm</button>
+          <button type="button" id="cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
 </html>
