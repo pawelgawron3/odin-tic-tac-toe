@@ -52,7 +52,8 @@ header {
   }
 }
 
-#addPlayersButton {
+#addPlayersButton,
+#createPlayersForm .dialogButtons button {
   font-size: 1rem;
   border: none;
   padding: 10px 20px;
@@ -64,7 +65,8 @@ header {
   cursor: pointer;
 }
 
-#addPlayersButton:hover {
+#addPlayersButton:hover,
+#createPlayersForm .dialogButtons button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
@@ -101,4 +103,44 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#createPlayersForm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#createPlayersForm .dialogButtons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#createPlayersForm input[type="text"] {
+  font-family: "Fredoka";
+  font-size: 1rem;
+  border-radius: 10px;
+  padding-left: 8px;
+  border: 1px solid #6b5b95;
+}
+
+#createPlayersForm input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #6b5b95;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+#createPlayersDialog {
+  width: 20vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+#createPlayersDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
