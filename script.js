@@ -42,6 +42,16 @@ createPlayersForm.addEventListener("submit", (e) => {
 
 function handleGame(playersArray) {
   let gameboard = [];
+
+  const main = document.querySelector("main");
+  main.classList.add("flex");
+
+  let board = document.createElement("div");
+  //   board.style.width = "300px";
+  //   board.style.height = "300px";
+
+  main.appendChild(board);
+
   let playerToMove = playersArray[0];
   function makeMove() {
     if (playerToMove === playersArray[0]) {
