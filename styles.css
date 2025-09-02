@@ -59,7 +59,8 @@ header {
 }
 
 #addPlayersButton,
-#createPlayersForm .dialogButtons button {
+#createPlayersForm .dialogButtons button,
+#playAgainButton {
   font-size: 1rem;
   border: none;
   padding: 10px 20px;
@@ -72,7 +73,8 @@ header {
 }
 
 #addPlayersButton:hover,
-#createPlayersForm .dialogButtons button:hover {
+#createPlayersForm .dialogButtons button:hover,
+#playAgainButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   background-color: white;
@@ -87,6 +89,41 @@ header {
 main {
   background-color: #fceabb;
   padding: 2rem;
+  position: relative;
+}
+
+#resultsDiv {
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 5px dotted #6b5b95;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  padding: 1rem;
+  display: none;
+}
+
+#board {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.square:hover {
+  box-shadow: inset 0 0 4px black;
+  cursor: pointer;
 }
 
 footer {
