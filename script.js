@@ -1,4 +1,3 @@
-let draws = 0;
 let gameState = {
   gameOver: false,
   gameboard: [
@@ -6,6 +5,7 @@ let gameState = {
     ["", "", ""],
     ["", "", ""],
   ],
+  draws: 0,
 };
 
 const addPlayersButton = document.querySelector("#addPlayersButton");
@@ -43,6 +43,7 @@ cancelButton.addEventListener("click", () => {
 createPlayersForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  gameState.draws = 0;
   playAgainButton.click();
 
   const playerOneName = createPlayersForm.querySelector("#playerOneName").value;
@@ -105,7 +106,7 @@ function handleGame(playersArray) {
         alert(`${winningPlayer.name} has won the game!`);
       } else if (isBoardFull(gameState.gameboard)) {
         gameState.gameOver = true;
-        draws++;
+        gameState.draws++;
         displayScore();
         alert("It's a draw!");
       }
@@ -196,7 +197,7 @@ function handleGame(playersArray) {
 
     player1result.textContent = "" + playersArray[0].result;
     player2result.textContent = "" + playersArray[1].result;
-    drawsCounter.textContent = "" + draws;
+    drawsCounter.textContent = "" + gameState.draws;
 
     resultsDiv.style.display = "flex";
   }
